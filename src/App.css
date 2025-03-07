@@ -1,0 +1,148 @@
+.app-header {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #78ced6;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  z-index: 4;
+}
+
+.logo-box {
+  width: 20%;
+  height: 100%;
+  
+}
+
+.mtcg-logo {
+  width: 100%;
+  background-color: #78ced6;
+  border-bottom-right-radius: 25px;
+}
+
+.header-text {
+  font-size: 64px;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2%;
+  text-shadow: -3px -3px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.desc-text {
+  color: white;
+  font-size: 28px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background-color: #61c5cf;
+  padding: 2%;
+  border-radius: 25px;
+}
+
+.app-body {
+  display: flex;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box-set {
+  position: relative;
+  display: flex;
+  padding-bottom: 5%;
+  margin: 0;
+  width: 80%;
+  flex-direction: row;
+}
+
+.link-box {
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  /* outline: 2px blue solid; */
+}
+
+.desc-box {
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  /* outline: 2px red solid; */
+  text-align: center;
+}
+
+.forSale-logo {
+  width: 65%;
+}
+
+.app-footer {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #78ced6;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  z-index: 4;
+}
+
+.insta-box {
+  display: flex;
+  padding: 1% 1% 1% 3%;
+  min-width: 22%;
+  height: 80%;
+  outline: 2px white solid;
+  background-color: #61c5cf;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.footer-text {
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.insta-link {
+  width: 100%;
+  display: flex;
+}
+
+.insta-icon {
+  position: relative;
+  height: 100%;
+  padding-left: 2%;
+}
+
+/* Looping Pokemon Sprites */
+@keyframes loopingImg {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.looping-box {
+  width: 120%;
+  overflow: hidden;
+  padding: 40px 0;
+  white-space: nowrap;
+}
+
+.looping-imgs-box {
+  animation: loopingImg 12s infinite linear;
+  display: inline-block;
+}
+
+.looping-img {
+  height: 100px;
+  margin: 0 40px;
+}
+
