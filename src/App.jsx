@@ -11,6 +11,7 @@ import ironIcon from './assets/poke-icons/iron.webp'
 import zardIcon from './assets/poke-icons/zard.webp'
 import typhIcon from './assets/poke-icons/typh.webp'
 import gmolIcon from './assets/poke-icons/gmol.webp'
+import snowStorm from './assets/snows.gif'
 
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,6 +35,7 @@ const App = () => {
           <img src={MTCGLogo} alt="MTCG PokeStop Logo" className='mtcg-logo' />
         </div>
       </div>
+      <div className={`storm-box ${scrolled ? 'scrolled' : ''}`}><img src={snowStorm} alt="storm" className='snow-img' /></div>
       <div className="app-body">
         <h2 className='header-text'>Links</h2>
           <div className="box-set">
@@ -46,12 +48,8 @@ const App = () => {
               <a href="https://store.tcgplayer.com/sellerfeedback/a700ba02">
                 <p className='desc-text'>Check out my TCGPlayer Shop Here!</p>
               </a>
-              <p className='desc-text'>I will be updating/rotating my inventory as frequently as I can :)</p>
+              <p className='desc-text'>I will be updating my inventory as frequently as I can :)</p>
             </div>
-          </div>
-
-          <div className="desc-box">
-            <p className='desc-text'>More Updates Coming Soon!</p>
           </div>
 
         </div>

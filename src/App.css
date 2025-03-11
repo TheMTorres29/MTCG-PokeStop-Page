@@ -30,32 +30,51 @@
   padding: 4%;
 }
 
+/* Snow Storm */
+.storm-box {
+  width: 100%;
+  z-index: 3;
+  opacity: 100;
+}
+
+.storm-box.scrolled { 
+  width: 0%;
+  opacity: 0;
+}
+
+.snow-img {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
 
 /* App Body */
-
 .app-body {
+  width: 100%;
   display: flex;
-  padding-top: 20%;
+  padding-top: 30%;
   padding-bottom: 20%;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 .header-text {
   font-size: 64px;
-  width: 50%;
+  width: auto;
+  padding: 1% 4%;
+  border-radius: 25px;
   margin: 0 auto;
-  padding-bottom: 2%;
-  text-shadow: -3px -3px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  background-color: #78ced6;
 }
 
 .desc-text {
   color: white;
   font-size: 28px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   background-color: #61c5cf;
-  padding: 2%;
+  padding: 6%;
   border-radius: 25px;
+  margin: 3%;
 }
 
 .box-set {
@@ -88,6 +107,11 @@
 
 .forSale-logo {
   width: 100%;
+  margin: 0 auto;
+}
+
+.closing-text {
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -147,7 +171,7 @@
 }
 
 .looping-box {
-  width: 120%;
+  width: 100%;
   overflow: hidden;
   padding: 40px 0;
   white-space: nowrap;
@@ -171,7 +195,9 @@
   }
 }
 @media screen and (max-width: 960px) {
-  
+  .app-body {
+    padding-top: 30%;
+  }
 }
 @media screen and (max-width: 768px) {
   .logo-box {
@@ -181,8 +207,34 @@
   .logo-box.scrolled {
     max-width: 33%;
   }
+
+  .app-body {
+    padding-top: 50%;
+  }
+
+  .header-text {
+    font-size: 54px;
+  }
+
+  .desc-text {
+    width: 100% auto;
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 430px) {
+  .app-body {
+    padding-top: 60%;
+  }
+
+  .header-text {
+    font-size: 34px;
+  }
+
+  .desc-text {
+    width: 100%;
+    font-size: 18px;
+  }
+
   .footer-text {
     font-size: 18px;
   }
