@@ -18,10 +18,10 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
+      if (window.scrollY < 50) {
         setScrolled(false);
+      } else {
+        setScrolled(true);
       }
     };
 
@@ -35,7 +35,9 @@ const App = () => {
           <img src={MTCGLogo} alt="MTCG PokeStop Logo" className='mtcg-logo' />
         </div>
       </div>
-      <div className={`storm-box ${scrolled ? 'scrolled' : ''}`}><img src={snowStorm} alt="storm" className='snow-img' /></div>
+      <div className={`storm-box ${scrolled ? 'scrolled' : ''}`}>
+        <img src={snowStorm} alt="storm" className={`storm-img ${scrolled ? 'scrolled' : ''}`} />
+      </div>
       <div className="app-body">
         <h2 className='header-text'>Links</h2>
           <div className="box-set">
