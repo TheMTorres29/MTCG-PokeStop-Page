@@ -63,7 +63,6 @@
 .app-body {
   width: 100%;
   display: flex;
-  padding-top: 30%;
   padding-bottom: 20%;
   flex-direction: column;
   align-items: center;
@@ -166,7 +165,6 @@
 }
 
 .insta-icon {
-  /* position: relative; */
   padding: 2% 5%;
   height: 100%;
 }
@@ -206,9 +204,7 @@
   }
 }
 @media screen and (max-width: 960px) {
-  .app-body {
-    padding-top: 30%;
-  }
+
 }
 @media screen and (max-width: 768px) {
   .logo-box {
@@ -220,7 +216,7 @@
   }
 
   .app-body {
-    padding-top: 50%;
+    padding-top: 0%;
   }
 
   .header-text {
@@ -233,9 +229,6 @@
   }
 }
 @media screen and (max-width: 430px) {
-  .app-body {
-    padding-top: 60%;
-  }
 
   .header-text {
     font-size: 34px;
