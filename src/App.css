@@ -69,6 +69,7 @@
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 .header-text {
   font-size: 64px;
   width: auto;
@@ -102,6 +103,13 @@
   padding: 0;
   margin: 0;
   width: 50%;
+  transition: .3s ease;
+  border-radius: 50%;
+}
+
+.link-box:hover {
+  outline: 7px solid #78ced6;
+  opacity: 85%;
 }
 
 .desc-box {
@@ -113,6 +121,13 @@
 
 .desc-box a {
   text-decoration: none;
+}
+
+.desc-box a:hover {
+  background-color: aliceblue;
+  outline: 5px solid #78ced6;
+  border-radius: 50%;
+  opacity: 85%;
 }
 
 .forSale-logo {
@@ -147,6 +162,13 @@
   border-radius: 25px;
   margin-left: auto;
   margin-right: 1%;
+  transition: .3s ease;
+}
+
+.insta-box:hover {
+  background-color: #78ced6;
+  outline: 5px solid #78ced6;
+  opacity: 85%;
 }
 
 .footer-text {
@@ -194,6 +216,11 @@
 .looping-img {
   height: 100px;
   margin: 0 40px;
+  transition: .3s ease;
+}
+
+.looping-img:hover {
+  padding-bottom: 12px;
 }
 
 /* Scaling by Dimension*/
