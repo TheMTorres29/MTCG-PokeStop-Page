@@ -234,6 +234,15 @@
 
 }
 @media screen and (max-width: 768px) {
+  .box-set {
+    position: relative;
+    display: flex;
+    padding-bottom: 5%;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
   .logo-box {
     max-width: 85%;
     height: 100%;
