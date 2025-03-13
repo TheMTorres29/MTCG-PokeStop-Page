@@ -1,0 +1,72 @@
+.footer-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.app-footer {
+    width: 100%;
+    height: 64px;
+    background-color: #78ced6;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    z-index: 4;
+  }
+  
+  .insta-box {
+    display: flex;
+    width: 200px;
+    height: 75%;
+    outline: 2px white solid;
+    background-color: #61c5cf;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: 1%;
+    transition: .3s ease;
+  }
+  
+  .insta-box:hover {
+    background-color: #78ced6;
+    outline: 5px solid #78ced6;
+    opacity: 85%;
+  }
+  
+  .footer-text {
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    margin: auto auto;
+  
+  }
+  
+  .insta-link {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+  }
+  
+  .insta-icon {
+    padding: 2% 5%;
+    height: 100%;
+  }
+  
+  /* Scaling by Dimension*/
+  @media screen and (max-width: 1200px) {
+
+  }
+  @media screen and (max-width: 960px) {
+  
+  }
+  @media screen and (max-width: 768px) {
+    .insta-box {
+        width: 150px;;
+      }
+    
+      .footer-text {
+        font-size: 18px;
+      }
+  }
+  @media screen and (max-width: 430px) {
+
+  }

@@ -1,0 +1,87 @@
+.header-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.app-header {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 64px;
+    background-color: #78ced6;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+  }
+  
+  .logo-box {
+    max-width: 55%;
+    height: 175%;
+    margin: 0 auto;
+    transition: 0.4s ease;
+  }
+  
+  .logo-box.scrolled {
+    max-width: 25%;
+    margin: 0;
+  }
+  
+  .mtcg-logo {
+    max-width: 100%;
+    background-color: #78ced6;
+    border-radius: 0 0 42% 42%;
+    padding: 4%;
+  }
+  
+  /* Snow Storm */
+  .storm-box {
+    width: 100%;
+    z-index: 3;
+    opacity: 100;
+  }
+  
+  .storm-box.scrolled { 
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .storm-img {
+    width: 100%;
+    opacity: 100;
+    height: 100vh;
+    margin: 0 auto;
+    transition: 0.4s ease;
+  }
+  
+  .storm-img.scrolled {
+    max-width: 0%;
+    opacity: 0;
+  }
+
+  /* Scaling by Dimension*/
+@media screen and (max-width: 1200px) {
+    .logo-box {
+      max-width: 85%;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 960px) {
+  
+  }
+  @media screen and (max-width: 768px) {
+    .logo-box {
+      max-width: 85%;
+      height: 100%;
+    }
+    .logo-box.scrolled {
+      max-width: 33%;
+    }
+  }
+  @media screen and (max-width: 430px) {
+
+  }

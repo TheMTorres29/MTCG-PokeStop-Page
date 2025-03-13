@@ -1,0 +1,37 @@
+.spritecar-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Looping Pokemon Sprites */
+@keyframes loopingImg {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .looping-box {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    white-space: nowrap;
+  }
+  
+  .looping-imgs-box {
+    animation: loopingImg 12s infinite linear;
+    display: inline-block;
+  }
+  
+  .looping-img {
+    height: 100px;
+    margin: 0 40px;
+    transition: .3s ease;
+  }
+  
+  .looping-img:hover {
+    padding-bottom: 12px;
+  }

@@ -1,64 +1,4 @@
 
-/* Header */
-.app-header {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 64px;
-  background-color: #78ced6;
-  align-items: center;
-  position: fixed;
-  display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
-}
-
-.logo-box {
-  max-width: 55%;
-  height: 175%;
-  margin: 0 auto;
-  transition: 0.4s ease;
-}
-
-.logo-box.scrolled {
-  max-width: 25%;
-  margin: 0;
-}
-
-.mtcg-logo {
-  max-width: 100%;
-  background-color: #78ced6;
-  border-radius: 0 0 42% 42%;
-  padding: 4%;
-}
-
-/* Snow Storm */
-.storm-box {
-  width: 100%;
-  z-index: 3;
-  opacity: 100;
-}
-
-.storm-box.scrolled { 
-  width: 0%;
-  opacity: 0;
-}
-
-.storm-img {
-  width: 100%;
-  opacity: 100;
-  height: 100vh;
-  margin: 0 auto;
-  transition: 0.4s ease;
-}
-
-.storm-img.scrolled {
-  max-width: 0%;
-  opacity: 0;
-}
-
 /* App Body */
 .app-body {
   width: 100%;
@@ -80,6 +20,8 @@
 }
 
 .desc-text {
+  position: relative;
+  display: flex;
   color: white;
   font-size: 28px;
   background-color: #61c5cf;
@@ -92,16 +34,15 @@
   position: relative;
   display: flex;
   padding-bottom: 5%;
-  margin: 0;
-  max-width: 66%;
+  margin: 0 auto;
+  max-width: 100%;
   flex-direction: column-reverse;
-  margin-left: auto;
-  margin-right: 0;
+  align-content: center;
 }
 
 .link-box {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   width: 50%;
   transition: .3s ease;
   border-radius: 50%;
@@ -114,7 +55,7 @@
 
 .desc-box {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   width: 50%;
   text-align: center;
 }
@@ -140,95 +81,9 @@
   margin: 0 auto;
 }
 
-/* Footer */
-.app-footer {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 64px;
-  background-color: #78ced6;
-  flex-direction: row;
-  align-items: center;
-  display: flex;
-  z-index: 4;
-}
-
-.insta-box {
-  display: flex;
-  width: 200px;
-  height: 75%;
-  outline: 2px white solid;
-  background-color: #61c5cf;
-  border-radius: 25px;
-  margin-left: auto;
-  margin-right: 1%;
-  transition: .3s ease;
-}
-
-.insta-box:hover {
-  background-color: #78ced6;
-  outline: 5px solid #78ced6;
-  opacity: 85%;
-}
-
-.footer-text {
-  vertical-align: middle;
-  text-align: center;
-  /* padding: 5%; */
-  color: white;
-  margin: auto auto;
-
-}
-
-.insta-link {
-  width: 100%;
-  display: flex;
-
-}
-
-.insta-icon {
-  padding: 2% 5%;
-  height: 100%;
-}
-
-/* Looping Pokemon Sprites */
-@keyframes loopingImg {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.looping-box {
-  width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
-  white-space: nowrap;
-}
-
-.looping-imgs-box {
-  animation: loopingImg 12s infinite linear;
-  display: inline-block;
-}
-
-.looping-img {
-  height: 100px;
-  margin: 0 40px;
-  transition: .3s ease;
-}
-
-.looping-img:hover {
-  padding-bottom: 12px;
-}
-
 /* Scaling by Dimension*/
 @media screen and (max-width: 1200px) {
-  .logo-box {
-    max-width: 85%;
-    height: 100%;
-  }
+
 }
 @media screen and (max-width: 960px) {
 
@@ -241,14 +96,6 @@
     max-width: 100%;
     margin: 0 auto;
     align-items: center;
-  }
-  
-  .logo-box {
-    max-width: 85%;
-    height: 100%;
-  }
-  .logo-box.scrolled {
-    max-width: 33%;
   }
 
   .app-body {
@@ -272,10 +119,6 @@
 
   .desc-text {
     width: 100%;
-    font-size: 18px;
-  }
-
-  .footer-text {
     font-size: 18px;
   }
 }
