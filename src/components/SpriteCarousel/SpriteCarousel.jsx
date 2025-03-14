@@ -9,32 +9,34 @@ import zardIcon from '../../assets/poke-icons/zard.webp'
 import typhIcon from '../../assets/poke-icons/typh.webp'
 import gmolIcon from '../../assets/poke-icons/gmol.webp'
 
+const pokeSprites = [
+    {id: 1, src: chienIcon},
+    {id: 2, src: mimikIcon},
+    {id: 3, src: dragIcon},
+    {id: 4, src: gholdIcon},
+    {id: 5, src: flutterIcon},
+    {id: 6, src: ironIcon},
+    {id: 7, src: zardIcon},
+    {id: 8, src: typhIcon},
+    {id: 9, src: gmolIcon},
+]
+
 const SpriteCarousel = () => {
   return (
-    <div className='spritecar-container'>
-        <div className="looping-box">
-            <div className="looping-imgs-box">
-                <img src={chienIcon} alt="Pokemon" className='looping-img' />
-                <img src={mimikIcon} alt="Pokemon" className='looping-img' />
-                <img src={dragIcon} alt="Pokemon" className='looping-img' />
-                <img src={gholdIcon} alt="Pokemon" className='looping-img' />
-                <img src={flutterIcon} alt="Pokemon" className='looping-img' />
-                <img src={ironIcon} alt="Pokemon" className='looping-img' />
-                <img src={typhIcon} alt="Pokemon" className='looping-img' />
-                <img src={zardIcon} alt="Pokemon" className='looping-img' />
-                <img src={gmolIcon} alt="Pokemon" className='looping-img' />
-            </div>
-                <div className="looping-imgs-box">
-                <img src={chienIcon} alt="Pokemon" className='looping-img' />
-                <img src={mimikIcon} alt="Pokemon" className='looping-img' />
-                <img src={dragIcon} alt="Pokemon" className='looping-img' />
-                <img src={gholdIcon} alt="Pokemon" className='looping-img' />
-                <img src={flutterIcon} alt="Pokemon" className='looping-img' />
-                <img src={ironIcon} alt="Pokemon" className='looping-img' />
-                <img src={typhIcon} alt="Pokemon" className='looping-img' />
-                <img src={zardIcon} alt="Pokemon" className='looping-img' />
-                <img src={gmolIcon} alt="Pokemon" className='looping-img' />
-            </div>
+    <div className='sprite-container'>
+        <div className="looping-container">
+            {pokeSprites.map((e, id) => 
+                <div className='looping-img-container'>
+                    <img key={id} src={e.src} className='sprite-img' />
+                </div>
+            )}
+        </div>
+        <div className="looping-container">
+            {pokeSprites.map((e, id) => 
+                <div className='looping-img-container'>
+                    <img key={id} src={e.src} className='sprite-img' />
+                </div>
+            )}
         </div>
     </div>
   )

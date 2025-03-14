@@ -2,7 +2,7 @@
   "homepage": "https://themtorres29.github.io/MTCG-PokeStop-Page",
   "name": "mtcg-pokestop-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.8.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

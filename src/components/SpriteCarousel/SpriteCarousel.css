@@ -1,7 +1,10 @@
-.spritecar-container {
-    padding: 0;
-    margin: 0;
+.sprite-container {
     width: 100%;
+    overflow: hidden;
+    padding: 40px 100px;
+    margin: 0 auto;
+    align-items: center;
+    display: inline-flex;
 }
 
 /* Looping Pokemon Sprites */
@@ -14,24 +17,25 @@
     }
   }
   
-  .looping-box {
+.looping-container {
+    animation: loopingImg 9s infinite linear;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+  
+.looping-img-container {
+    width: 150px;
+    padding: 0% 1%;
+}
+
+.sprite-img {
+    position:inherit;
     width: 100%;
-    overflow: hidden;
-    padding: 40px 0;
-    white-space: nowrap;
-  }
-  
-  .looping-imgs-box {
-    animation: loopingImg 12s infinite linear;
-    display: inline-block;
-  }
-  
-  .looping-img {
-    height: 100px;
-    margin: 0 40px;
     transition: .3s ease;
-  }
+}
   
-  .looping-img:hover {
-    padding-bottom: 12px;
-  }
+.sprite-img:hover {
+    transform: scale(1.2);
+}
