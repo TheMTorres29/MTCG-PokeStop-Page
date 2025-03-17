@@ -11,14 +11,15 @@ import gmolIcon from '../../assets/poke-icons/gmol.webp'
 
 const pokeSprites = [
     {id: 1, src: chienIcon},
-    {id: 2, src: mimikIcon},
     {id: 3, src: dragIcon},
     {id: 4, src: gholdIcon},
     {id: 5, src: flutterIcon},
     {id: 6, src: ironIcon},
+    {id: 9, src: gmolIcon},
     {id: 7, src: zardIcon},
     {id: 8, src: typhIcon},
-    {id: 9, src: gmolIcon},
+    {id: 2, src: mimikIcon},
+
 ]
 
 const SpriteCarousel = () => {

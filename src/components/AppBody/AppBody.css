@@ -31,16 +31,52 @@
     width: 50%;
     transition: .3s ease;
     border-radius: 50%;
+    background: url('../../assets/forSaleLogo/pokeball-bg.png') no-repeat;
+    background-size: cover;
+    z-index: 0;
 }
 
 .forSale-link {
     width: 50%;
+
 }
 
 .forSale-img {
     width: 100%;
     transition: .3s ease;
+    z-index: 2;
+}
 
+.forSale-link::before {
+    content: '';
+    background-image: url('../../assets/forSaleLogo/ghold.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: inline-flex;
+    width: 0%;
+    height: 0%;
+    top: 60%;
+    left: 40%;
+    z-index: -1;
+    transition: .3s ease;
+}
+
+.forSale-link::after {
+    content: '';
+    background-image: url('../../assets/forSaleLogo/gimmi.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: inline-flex;
+    width: 0%;
+    height: 0%;
+    top: 60%;
+    right: 40%;
+    z-index: -1;
+    transition: .3s ease;
 }
 
 .desc-box {
@@ -61,7 +97,7 @@
     margin: 0 auto;
     transition: .3s ease;
     border-radius: 25px;
-    padding: 1%;
+    padding: 0% 12%;
 }
 
 .desc-text {
@@ -96,6 +132,20 @@
     z-index: 5;
 }
 
+.forSale-link:hover::before{
+    content: '';
+    width: 50%;
+    height: 50%;
+    top: 40%;
+    left: 15%;
+} 
+.forSale-link:hover::after {
+    content: '';
+    width: 50%;
+    height: 50%;
+    top: 40%;
+    right: 18%;
+}
   
 /* Scaling by Dimension*/
 @media screen and (max-width: 1200px) {
@@ -136,8 +186,12 @@
       font-size: 34px;
     }
 
-    .desc-box {
-        padding: 1%;
+    .desc-link:hover {
+        padding: 0 15%;
+    }
+
+    .desc-link:active {
+        padding: 1% 10%;
     }
   
     .desc-text {
@@ -146,6 +200,29 @@
     }
 
     .forSale-img:hover {
-        transform: scale(1.4);
+        transform: scale(1.2);
+    }
+
+    .forSale-link::before {
+        padding: 0;
+    }
+
+    .forSale-link::after {
+
+    }
+
+    .forSale-link:hover::before{
+        content: '';
+        width: 42%;
+        height: 42%;
+        top: 50%;
+        left: 18%;
+    } 
+    .forSale-link:hover::after {
+        content: '';
+        width: 44%;
+        height: 44%;
+        top: 50%;
+        right: 21%;
     }
 }

@@ -1,6 +1,6 @@
 
 import './AppBody.css';
-import forSale from '../../assets/forSaleLogo.png'
+import forSale from '../../assets/forSaleLogo/forSale-text.png'
 import TCGPLogo from '../../assets/tcgplayer-logo.png'
 
 
