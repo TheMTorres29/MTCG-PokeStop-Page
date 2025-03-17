@@ -203,14 +203,6 @@
         transform: scale(1.2);
     }
 
-    .forSale-link::before {
-        padding: 0;
-    }
-
-    .forSale-link::after {
-
-    }
-
     .forSale-link:hover::before{
         content: '';
         width: 42%;
