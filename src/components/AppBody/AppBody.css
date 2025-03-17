@@ -134,10 +134,18 @@
 @media screen and (max-width: 430px) {
     .header-text {
       font-size: 34px;
-}
+    }
+
+    .desc-box {
+        padding: 1%;
+    }
   
     .desc-text {
       width: 100%;
       font-size: 18px;
+    }
+
+    .forSale-img:hover {
+        transform: scale(1.4);
     }
 }
