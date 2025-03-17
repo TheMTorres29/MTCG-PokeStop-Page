@@ -24,8 +24,9 @@
   
   .insta-box:hover {
     background-color: #67b3ba;
-    outline: 5px solid #78ced6;
+    /* outline: 5px solid #78ced6; */
     opacity: 85%;
+    scale: 1.1;
   }
   
   .footer-text {

@@ -20,7 +20,7 @@ const Header = () => {
   }, [])
   return (
     <div className="header-container">
-        <div className='app-header'>
+        <div className={`app-header ${scrolled ? 'scrolled' : ''}`}>
             <div className={`logo-box ${scrolled ? 'scrolled' : ''}`}>
                 <img src={MTCGLogo} alt="MTCG PokeStop Logo" className='mtcg-logo' />
             </div>

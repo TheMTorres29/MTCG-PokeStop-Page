@@ -16,7 +16,7 @@ const AppBody = () => {
             </a>
           </div>
           <div className="desc-box">
-            <a href="https://store.tcgplayer.com/sellerfeedback/a700ba02" className='desc-link'>
+            <a href="https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid" className='desc-link'>
 
                 <p className='desc-text'>Check out my</p>
                 <img src={TCGPLogo} alt="TCGPlayer" className='tcg-img' />

@@ -1,10 +1,9 @@
 .sprite-container {
-    width: 100%;
+    width: 200%;
     overflow: hidden;
-    padding: 40px 100px;
-    margin: 0 auto;
-    align-items: center;
+    padding: 0 0 2% 0;
     display: inline-flex;
+    align-content: space-evenly;
 }
 
 
@@ -12,29 +11,26 @@
 /* Looping Pokemon Sprites */
 @keyframes loopingImg {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-98%);
+    transform: translateX(-100%);
   }
 }
   
 .looping-container {
-    animation: loopingImg 9s infinite linear;
+    width: 100%;
     position: relative;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    padding: 0% 1.2%;
+    animation: loopingImg 19s infinite linear;
+    display: inline-flex;
 }
   
 .looping-img-container {
-    width: 150px;
-    padding: 0% 1%;
+    width: 100%;
 }
 
 .sprite-img {
-    position:inherit;
+    position: relative;
     width: 100%;
     transition: .3s ease;
 }
