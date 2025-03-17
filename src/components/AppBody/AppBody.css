@@ -61,17 +61,17 @@
     margin: 0 auto;
     transition: .3s ease;
     border-radius: 25px;
-
+    padding: 1%;
 }
 
 .desc-text {
     position: relative;
     display: block;
-    width: 150px;
+    width: 250px;
     padding: 0% 2%;
     margin: auto auto;
     color: black;
-    font-size: 28px;
+    font-size: 36px;
 }
 
 .tcg-img {
