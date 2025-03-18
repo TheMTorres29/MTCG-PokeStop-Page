@@ -187,6 +187,10 @@
       align-items: center;
     }
   
+    .desc-link {
+        padding-bottom: 4%;
+    }
+
     .desc-text {
       width: 100% auto;
       font-size: 24px;
@@ -200,6 +204,10 @@
 @media screen and (max-width: 430px) {
     .header-text {
       font-size: 34px;
+    }
+
+    .desc-link {
+        padding: 0 2% 7% 2%;
     }
   
     .desc-text {
