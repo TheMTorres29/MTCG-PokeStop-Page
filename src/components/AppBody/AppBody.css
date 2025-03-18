@@ -95,7 +95,7 @@
     color: black;
     font-size: 36px;
     background-color: #78ced6;
-    outline: 2px #78ced6 solid;
+    outline: 1px #fff solid;
     transition: 0.2s linear;
     padding-bottom: 1.5%;
 }
