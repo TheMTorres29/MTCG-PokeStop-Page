@@ -10,7 +10,6 @@ const pokeSprites = [
     {id: 7, src: URL('../../assets/poke-icons/zard.webp')},
     {id: 8, src: URL('../../assets/poke-icons/typh.webp')},
     {id: 2, src: URL('../../assets/poke-icons/mimik.png')},
-
 ]
 
 const SpriteCarousel = () => {
