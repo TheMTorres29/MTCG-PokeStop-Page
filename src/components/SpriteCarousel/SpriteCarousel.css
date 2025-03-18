@@ -27,7 +27,6 @@
 }
 
 .sprite-img {
-    position: relative;
     width: 100%;
     transition: .3s ease;
 }

@@ -11,7 +11,7 @@ const AppBody = () => {
         
         <div className="link-container">
           <div className="img-link-container">
-            <a href="https://store.tcgplayer.com/sellerfeedback/a700ba02" className="forSale-link">
+            <a href="https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid" className="forSale-link">
               <img src={forSale} alt="For Sale Logo" className='forSale-img' />
             </a>
           </div>
