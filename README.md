@@ -27,3 +27,6 @@ The landing page will automatically adjust to your screen size, whether you're o
 💡 Contribution
 At this time, contributions aren't actively being accepted as this is a small landing project.
 However, feel free to fork, customize, or suggest improvements via Issues!
+
+📄 License
+This project is licensed under the [MIT License](LICENSE) — free to use, modify, and distribute.
