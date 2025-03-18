@@ -52,7 +52,8 @@
 }
 @media screen and (max-width: 430px) {
   .looping-container {
-    width: 400%;
+    width: 380%;
+    padding-bottom: 2%;
   }
 
   .looping-img-container {

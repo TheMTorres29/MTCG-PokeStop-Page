@@ -13,7 +13,7 @@
     padding: .5% 5%;
     border-radius: 25px;
     background-color: #96d8de;
-    outline: 2px white solid;
+    /* outline: 2px white solid; */
 
 }
     
@@ -197,16 +197,16 @@
 
     .forSale-link:hover::before{
         content: '';
-        width: 42%;
-        height: 42%;
-        top: 50%;
-        left: 18%;
-    } 
-    .forSale-link:hover::after {
-        content: '';
         width: 44%;
         height: 44%;
         top: 50%;
-        right: 21%;
+        left: 15%;
+    } 
+    .forSale-link:hover::after {
+        content: '';
+        width: 46%;
+        height: 46%;
+        top: 50%;
+        right: 18%;
     }
 }
