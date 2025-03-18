@@ -26,8 +26,7 @@ const AppBody = () => {
           </div>
         </div>
 
-        <h2 className='header-text'>Thanks for Stopping by!</h2>
-
+        <h2 className='header-text'>Thanks for Stopping by!  ^.^</h2>
     </div>
   )
 }

@@ -1,26 +1,28 @@
 import './SpriteCarousel.css'
-import chienIcon from '../../assets/poke-icons/chien.webp'
- import mimikIcon from '../../assets/poke-icons/mimik.png'
- import dragIcon from '../../assets/poke-icons/drag.webp'
- import gholdIcon from '../../assets/poke-icons/ghold.webp'
- import flutterIcon from '../../assets/poke-icons/flutter.webp'
- import ironIcon from '../../assets/poke-icons/iron.webp'
- import zardIcon from '../../assets/poke-icons/zard.webp'
- import typhIcon from '../../assets/poke-icons/typh.webp'
- import gmolIcon from '../../assets/poke-icons/gmol.webp'
+import missingN0 from '../../assets/poke-icons/MissingnoIdle.webp'
  
  const pokeSprites = [
-     {id: 1, src: chienIcon},
-     {id: 3, src: dragIcon},
-     {id: 4, src: gholdIcon},
-     {id: 5, src: flutterIcon},
-     {id: 6, src: ironIcon},
-     {id: 9, src: gmolIcon},
-     {id: 7, src: zardIcon},
-     {id: 8, src: typhIcon},
-     {id: 9, src: gmolIcon},
-     {id: 2, src: mimikIcon},
- 
+     {id: 0, src: missingN0},
+     {id: 1, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/venusaur.png'},
+     {id: 2, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/charizard.png'},
+     {id: 3, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/blastoise.png'},
+     {id: 4, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/gengar.png'},
+     {id: 5, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/dragonite.png'},
+     {id: 6, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/mewtwo.png'},
+     {id: 7, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/raikou.png'},
+     {id: 8, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/entei.png'},
+     {id: 9, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/suicune.png'},
+     {id: 10, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/lugia.png'},
+     {id: 11, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/ho-oh.png'},
+     {id: 12, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/ludicolo.png'},
+     {id: 13, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/rayquaza.png'},
+     {id: 14, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/deoxys.png'},
+     {id: 15, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/chandelure.png'},
+     {id: 16, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/giratina.png'},
+     {id: 17, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/arceus.png'},
+     {id: 18, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/dragapult.png'},
+     {id: 19, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/mimikyu.png'},
+     {id: 20, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/chien-pao.png'},
  ]
 
 const SpriteCarousel = () => {

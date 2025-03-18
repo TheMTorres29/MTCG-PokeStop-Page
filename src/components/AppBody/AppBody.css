@@ -13,8 +13,6 @@
     padding: .5% 5%;
     border-radius: 25px;
     background-color: #96d8de;
-    /* outline: 2px white solid; */
-
 }
     
 .link-container {
@@ -40,7 +38,6 @@
 
 .forSale-link {
     width: 5%;
-
 }
 
 .forSale-img {
@@ -91,17 +88,33 @@
 }
 
 .desc-link {
-    width: 50%;
+    width: 40%;
     transition: .3s ease;
     border-radius: 25px;
-    padding: 1% 10%;
     margin: 0 auto;
     color: black;
     font-size: 36px;
+    background-color: #78ced6;
+    outline: 2px #78ced6 solid;
+    transition: 0.2s linear;
+    padding-bottom: 1.5%;
+}
+
+.desc-link::before {
+    content: '';
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: block;
+    z-index: 2;
+    opacity: 0;
+    border-radius: 25px;
+    background: #78ced6;
+    transition: 0.3s linear;
 }
 
 .tcg-img {
-    width: 75%;
+    width: 70%;
     display: block;
     padding: 0% 1%;
     margin: auto;
@@ -109,16 +122,19 @@
 
 .sidenote-text {
     font-size: 36px;
-    padding: 1%;
+    padding: 2%;
 }
 
 .desc-link:hover {
     color: white;
-    background-color: #78ced6;
     outline: 2px white solid;
     opacity: 85%;
-    border-radius: 25px;
     transform: scale(1.1);
+}
+
+.desc-link:hover::before {
+    opacity: 100%;
+    background: linear-gradient(to top , #78ced6 25%, #fff);
 }
 
 .forSale-img:hover {

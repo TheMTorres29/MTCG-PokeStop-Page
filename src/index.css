@@ -5,11 +5,11 @@
 }
 
 html {
-  height: 100%;
+  height: max-content;
+  background: linear-gradient(to bottom, #d9d9d9 75%, #67b3ba);
 }
 
 body {
-  background-color: #d9d9d9;
   font-family:"Bebas Neue", sans-serif;
 }
 

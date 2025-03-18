@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import Header from './components/Header/Header.jsx'
 import AppBody from './components/AppBody/AppBody.jsx'
 import SpriteCarousel from './components/SpriteCarousel/SpriteCarousel.jsx'
