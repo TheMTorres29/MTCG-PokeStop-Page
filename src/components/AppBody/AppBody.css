@@ -207,7 +207,13 @@
     }
 
     .desc-link {
-        padding: 0 2% 7% 2%;
+        padding: 0 0% 7% 0%;
+    }
+
+    .desc-link:hover::before {
+        opacity: 100%;
+        width: 100%;
+        background: linear-gradient(to top , #78ced6 25%, #fff);
     }
   
     .desc-text {
