@@ -1,12 +1,28 @@
 
-import './AppBody.css';
+import { motion } from 'framer-motion'
+import './AppBody.css'
 import forSale from '../../assets/forSaleLogo/forSale-text.png'
 import TCGPLogo from '../../assets/tcgplayer-logo.png'
 
 
 const AppBody = () => {
   return (
-    <div className='appbody-container'>
+    <motion.div 
+      initial={{
+        opacity: 0
+      }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: .5,
+        }
+      }}
+      viewport={{
+        amount: "some",
+        margin: "-200px"
+      }}
+      className='appbody-container'
+    >
         <h2 className='header-text'>Links</h2>
         
         <div className="link-container">
@@ -27,7 +43,7 @@ const AppBody = () => {
         </div>
 
         <h2 className='header-text'>Thanks for Stopping by!  ^.^</h2>
-    </div>
+    </motion.div>
   )
 }
 
