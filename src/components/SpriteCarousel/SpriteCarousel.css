@@ -27,7 +27,7 @@
 .looping-container {
     width: 200%;
     position: relative;
-    animation: loopingImg 29s infinite linear;
+    animation: loopingImg 50s infinite linear;
     display: inline-flex;
     padding-top: 2.4%;
 }
