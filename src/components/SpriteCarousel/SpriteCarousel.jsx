@@ -2,7 +2,7 @@ import './SpriteCarousel.css'
 import missingN0 from '../../assets/poke-icons/MissingnoIdle.webp'
  
  const pokeSprites = [
-     {id: 0, src: missingN0},
+    //  {id: 0, src: missingN0},
      {id: 1, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/venusaur.png'},
      {id: 2, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/charizard.png'},
      {id: 3, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/blastoise.png'},
