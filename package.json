@@ -13,7 +13,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "generate:favicon": "node scripts/generate-favicon.mjs",
-    "prepare:icons": "node scripts/prepare-touch-icon.mjs"
+    "prepare:icons": "node scripts/generate-apple-icons.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.15.0",
@@ -32,6 +32,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "vite": "^6.2.0",
-    "png-to-ico": "^3.0.1"
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.33.5"
   }
 }
