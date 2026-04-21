@@ -85,6 +85,10 @@
     margin: 0 auto;
 }
 
+.desc-text {
+    text-align: center;
+}
+
 .sidenote-text {
     font-size: 18px;
     font-weight: 500;
@@ -236,7 +240,7 @@
     .desc-link {
         font-size: 18px;
         padding: 1.5rem 1rem;
-        border-radius: 16px;
+        border-radius: 80%;
     }
 
     .tcg-img {
