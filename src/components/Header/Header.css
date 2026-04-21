@@ -69,9 +69,6 @@
     max-width: 800px;
     max-height: 750px;
     transition: 0.5s ease-in-out;
-
-/*    border-radius: 0 0 50%;
-    background: linear-gradient(180deg, #78ced6 0%, #78ced6 60%, transparent 100%);*/
 }
 
 .logo-box::before {
