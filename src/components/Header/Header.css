@@ -119,7 +119,7 @@
     .logo-box {
       max-width: 85%;
       height: 100%;
-      padding-top: 30%;
+      padding-top: 10%;
 
     }
     .logo-box.scrolled {
@@ -130,6 +130,6 @@
     .logo-box {
       max-width: 85%;
       height: 100%;
-      padding-top: 120%;
+      padding-top: 110%;
     }
   }
