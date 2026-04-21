@@ -5,42 +5,69 @@ import TCGPLogo from '../../assets/tcgplayer-logo.png'
 
 const TCGPLAYER_URL = "https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid"
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.6, staggerChildren: 0.2 }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+}
+
 const AppBody = () => (
   <motion.div 
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-    viewport={{ amount: "some", margin: "-200px" }}
+    initial="hidden"
+    whileInView="visible"
+    variants={containerVariants}
+    viewport={{ amount: "some", margin: "-100px" }}
     className='appbody-container'
   >
-    <h2 className='header-text'>Links</h2>
+    <motion.h2 className='header-text' variants={itemVariants}>
+      Pokémon Cards
+    </motion.h2>
+
     <section className="link-container">
-      <div className="img-link-container">
+      <motion.div className="img-link-container" variants={itemVariants}>
         <a 
           href={TCGPLAYER_URL} 
           className="forSale-link" 
           target="_blank" 
           rel="noopener noreferrer"
+          aria-label="Browse our collection"
         >
-          <img src={forSale} alt="For Sale Logo" className='forSale-img' />
+          <img src={forSale} alt="For Sale - Browse Collection" className='forSale-img' />
         </a>
-      </div>
-      <div className="desc-box">
+      </motion.div>
+
+      <motion.div className="desc-box" variants={itemVariants}>
         <a 
           href={TCGPLAYER_URL} 
           className='desc-link'
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit our TCGPlayer shop"
         >
-          <p className='desc-text'>Check out my</p>
-          <img src={TCGPLogo} alt="TCGPlayer" className='tcg-img' />
-          <p className='desc-text'> Shop Here!</p>
+          <p className='desc-text'>Explore Our</p>
+          <img src={TCGPLogo} alt="TCGPlayer Shop" className='tcg-img' />
+          <p className='desc-text'>Collection</p>
         </a>
         <p className='sidenote-text'>
-          I will be updating my inventory as frequently as I can :)
+          ✨ Regularly updated inventory with rare finds and competitive pricing
         </p>
-      </div>
+      </motion.div>
     </section>
-    <h2 className='header-text'>Thanks for Stopping by!  ^.^</h2>
+
+    <motion.h2 className='header-text' variants={itemVariants}>
+      Thanks for Stopping by! 🌟
+    </motion.h2>
   </motion.div>
 )
 

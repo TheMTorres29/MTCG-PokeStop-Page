@@ -5,45 +5,70 @@
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
+    padding: 4rem 2rem;
 }
 
 .header-text {
-    font-size: 64px;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1px;
     width: auto;
-    padding: .5% 5%;
-    border-radius: 25px;
-    background-color: #96d8de;
+    padding: 1.5rem 3rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #78ced6 0%, #96d8de 100%);
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(120, 206, 214, 0.2);
 }
-    
-.link-container {
-    position: relative;
-    display: flex;
-    margin: 0 auto;
-    max-width: 100%;
-    flex-direction: column-reverse;
-    align-content: center;
+
+.header-text:last-of-type {
+    margin-top: 4rem;
+    font-size: 48px;
     text-align: center;
 }
 
-.img-link-container {
-    padding: 0;
+.link-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
     margin: 0 auto;
-    width: 40%;
-    transition: .3s ease;
-    border-radius: 50%;
-    background: url('../../assets/forSaleLogo/pokeball-bg.png') no-repeat;
-    background-size: cover;
+}
+
+.img-link-container {
+    padding: 2rem;
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: 24px;
+    background: url('../../assets/forSaleLogo/pokeball-bg.png') no-repeat center;
+    background-size: contain;
     z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .forSale-link {
-    width: 5%;
+    width: 80%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .forSale-img {
     width: 100%;
-    transition: .3s ease;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
     z-index: 2;
+    filter: drop-shadow(0 8px 24px rgba(120, 206, 214, 0.3));
 }
 
 .forSale-link::before {
@@ -53,13 +78,14 @@
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    display: inline-flex;
+    display: flex;
     width: 0%;
     height: 0%;
-    top: 60%;
-    left: 40%;
-    z-index: -1;
-    transition: .3s ease;
+    top: 50%;
+    left: 25%;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: translate(-50%, -50%);
 }
 
 .forSale-link::after {
@@ -69,174 +95,226 @@
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    display: inline-flex;
+    display: flex;
     width: 0%;
     height: 0%;
-    top: 60%;
-    right: 40%;
-    z-index: -1;
-    transition: .3s ease;
+    top: 50%;
+    right: 25%;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: translate(50%, -50%);
 }
 
 .desc-box {
-    padding: 0;
-    margin: 0 auto;
+    padding: 2rem;
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .desc-link {
-    width: 40%;
-    transition: .3s ease;
-    border-radius: 25px;
-    margin: 0 auto;
-    color: black;
-    font-size: 36px;
-    background-color: #78ced6;
-    outline: 1px #fff solid;
-    transition: 0.2s linear;
-    padding-bottom: 1.5%;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: 24px;
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #78ced6 0%, #5dbcc3 100%);
+    border: none;
+    box-shadow: 0 12px 36px rgba(120, 206, 214, 0.25);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .desc-link::before {
     content: '';
-    width: 100%;
-    height: 30px;
-    position: relative;
-    display: block;
-    z-index: 2;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
     opacity: 0;
-    border-radius: 25px;
-    background: #78ced6;
-    transition: 0.3s linear;
+    transition: opacity 0.3s ease;
+    border-radius: 24px;
+    pointer-events: none;
 }
 
 .tcg-img {
-    width: 70%;
+    width: 60%;
+    max-width: 280px;
     display: block;
-    padding: 0% 1%;
-    margin: auto;
+    margin: 1rem auto;
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .sidenote-text {
-    font-size: 36px;
-    padding: 2%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1.5rem;
+    text-align: center;
+    color: #555;
+    letter-spacing: 0.3px;
 }
 
 .desc-link:hover {
-    color: white;
-    outline: 2px white solid;
-    opacity: 85%;
-    transform: scale(1.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(120, 206, 214, 0.35);
+    background: linear-gradient(135deg, #5dbcc3 0%, #4aafba 100%);
 }
 
 .desc-link:hover::before {
-    opacity: 100%;
-    background: linear-gradient(to top , #78ced6 25%, #fff);
+    opacity: 1;
 }
 
 .forSale-img:hover {
-    opacity: 95%;
-    transform: scale(1.1);
-    z-index: 5;
+    transform: scale(1.08);
+    filter: drop-shadow(0 12px 36px rgba(120, 206, 214, 0.4));
 }
 
-.forSale-link:hover::before{
-    content: '';
-    width: 50%;
-    height: 50%;
-    top: 40%;
-    left: 15%;
-} 
-.forSale-link:hover::after {
-    content: '';
-    width: 50%;
-    height: 50%;
-    top: 40%;
-    right: 18%;
+.img-link-container:hover {
+    transform: scale(1.02);
 }
-  
+
+.forSale-link:hover::before {
+    width: 45%;
+    height: 45%;
+} 
+
+.forSale-link:hover::after {
+    width: 45%;
+    height: 45%;
+}
+
 /* Scaling by Dimension*/
 @media screen and (max-width: 1200px) {
-  
+    .header-text {
+        font-size: 48px;
+        padding: 1.2rem 2.5rem;
+    }
+
+    .desc-link {
+        font-size: 28px;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .tcg-img {
+        width: 65%;
+    }
 }
+
 @media screen and (max-width: 960px) {
-  
-}
-@media screen and (max-width: 768px) {
-    .appbody-container {
-      padding-top: 0%;
+    .link-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
     .img-link-container {
-        width: 60%;
+        max-width: 400px;
+        margin: 0 auto;
     }
-    
+
+    .desc-box {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .appbody-container {
+        padding: 2rem 1rem;
+    }
+
     .header-text {
-      font-size: 54px;
+        font-size: 40px;
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .header-text:last-of-type {
+        font-size: 36px;
     }
 
     .link-container {
-      position: relative;
-      display: flex;
-      padding-bottom: 5%;
-      max-width: 100%;
-      margin: 0 auto;
-      align-items: center;
-    }
-  
-    .desc-link {
-        padding-bottom: 4%;
+        gap: 2rem;
     }
 
-    .desc-text {
-      width: 100% auto;
-      font-size: 24px;
+    .img-link-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .desc-link {
+        font-size: 24px;
+        padding: 2rem 1.5rem;
+    }
+
+    .tcg-img {
+        width: 70%;
     }
 
     .sidenote-text {
-        font-size: 20px;
-        padding-top: 2.5%;
+        font-size: 16px;
+        padding: 1rem;
     }
 }
+
 @media screen and (max-width: 430px) {
+    .appbody-container {
+        padding: 1.5rem 1rem;
+    }
+
     .header-text {
-      font-size: 34px;
+        font-size: 32px;
+        padding: 0.8rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .header-text:last-of-type {
+        font-size: 28px;
+    }
+
+    .link-container {
+        gap: 1.5rem;
+    }
+
+    .img-link-container {
+        max-width: 250px;
+        padding: 1rem;
+    }
+
+    .forSale-link {
+        width: 90%;
     }
 
     .desc-link {
-        padding: 0 0% 7% 0%;
+        font-size: 18px;
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
     }
 
-    .desc-link:hover::before {
-        opacity: 100%;
-        width: 100%;
-        background: linear-gradient(to top , #78ced6 25%, #fff);
-    }
-  
-    .desc-text {
-      width: 100%;
-      font-size: 18px;
+    .tcg-img {
+        width: 75%;
+        max-width: 180px;
     }
 
-    .forSale-img:hover {
-        transform: scale(1.2);
+    .sidenote-text {
+        font-size: 14px;
+        padding: 0.8rem;
     }
 
-    .forSale-link:hover::before{
-        content: '';
-        width: 44%;
-        height: 44%;
-        top: 50%;
-        left: 15%;
-    } 
+    .forSale-link:hover::before {
+        width: 40%;
+        height: 40%;
+    }
+
     .forSale-link:hover::after {
-        content: '';
-        width: 46%;
-        height: 46%;
-        top: 50%;
-        right: 18%;
+        width: 40%;
+        height: 40%;
     }
 }
