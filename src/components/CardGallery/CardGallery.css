@@ -190,7 +190,7 @@
   width: 100%;
   height: auto;
   border-radius: 16px;
-  object-fit: cover;
+  object-fit: contain;
   aspect-ratio: 250 / 350;
 }
 
@@ -277,10 +277,38 @@
     font-size: 16px;
   }
 
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+
   .modal-content {
     grid-template-columns: 1fr;
-    padding: 1.5rem;
-    gap: 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-image {
+    aspect-ratio: 250 / 350;
+    max-height: 350px;
+    width: 100%;
+  }
+
+  .modal-info h2 {
+    font-size: 22px;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-info p {
+    font-size: 14px;
+    margin: 0.5rem 0;
+  }
+
+  .modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
   }
 }
 
@@ -327,9 +355,20 @@
     font-size: 14px;
   }
 
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+
   .modal-content {
     border-radius: 16px;
     padding: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-image {
+    aspect-ratio: 250 / 350;
+    max-height: 250px;
   }
 
   .modal-close {
