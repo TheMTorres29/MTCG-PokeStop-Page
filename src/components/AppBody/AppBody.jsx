@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import './AppBody.css'
 import forSale from '../../assets/forSaleLogo/forSale-text.png'
-import TCGPLogo from '../../assets/tcgplayer-logo.png'
 
 const TCGPLAYER_URL = "https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid"
 
@@ -45,23 +44,6 @@ const AppBody = () => (
         >
           <img src={forSale} alt="For Sale - Browse Collection" className='forSale-img' />
         </a>
-      </motion.div>
-
-      <motion.div className="desc-box" variants={itemVariants}>
-        <a 
-          href={TCGPLAYER_URL} 
-          className='desc-link'
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit our TCGPlayer shop"
-        >
-          <p className='desc-text'>Explore Our</p>
-          <img src={TCGPLogo} alt="TCGPlayer Shop" className='tcg-img' />
-          <p className='desc-text'>Collection</p>
-        </a>
-        <p className='sidenote-text'>
-          ✨ Regularly updated inventory with rare finds and competitive pricing
-        </p>
       </motion.div>
     </section>
 
