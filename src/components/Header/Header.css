@@ -35,24 +35,49 @@
   .app-header.scrolled::after {
     opacity: 100;
   }
-  
-  .logo-box {
+
+.logo-box {
     max-width: 55%;
     height: 175%;
     margin: 0 auto;
     transition: 0.4s ease;
-  }
-  
-  .logo-box.scrolled {
+    border-radius: 0;
+    padding-top: 4%;
+}
+
+.logo-box.scrolled {
     max-width: 25%;
+    height: 64px;
     margin: 0;
+    background: radial-gradient(ellipse at center, #78ced6 0%, #78ced6 70%, transparent 100%);
+    background-color: transparent;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 18%;
+    animation: fadeInBackground 0.4s ease forwards;
+    box-shadow: inset 0 0 20px rgba(120, 206, 214, 0.5);
+}
+
+  @keyframes fadeInBackground {
+    to {
+      background: radial-gradient(ellipse at center, #78ced6 0%, #78ced6 70%, transparent 100%);
+    }
   }
   
   .mtcg-logo {
     max-width: 100%;
-    background-color: #78ced6;
     border-radius: 0 0 42% 42%;
     padding: 4%;
+  }
+
+  .logo-box.scrolled .mtcg-logo {
+    border-radius: 8px;
+    padding: 0;
+    width: auto;
+/*    max-height: 100%;*/
+    height: auto;
   }
   
   /* Snow Storm */
@@ -94,11 +119,17 @@
     .logo-box {
       max-width: 85%;
       height: 100%;
+      padding-top: 30%;
+
     }
     .logo-box.scrolled {
       max-width: 33%;
     }
   }
   @media screen and (max-width: 430px) {
-
+    .logo-box {
+      max-width: 85%;
+      height: 100%;
+      padding-top: 150%;
+    }
   }
