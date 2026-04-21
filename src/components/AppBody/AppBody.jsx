@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import './AppBody.css'
+import CardGallery from '../CardGallery/CardGallery'
 import forSale from '../../assets/forSaleLogo/forSale-text.png'
+import TCGPLogo from '../../assets/tcgplayer-logo.png'
 
 const TCGPLAYER_URL = "https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid"
 
@@ -21,6 +23,19 @@ const itemVariants = {
   }
 }
 
+const FEATURED_CARDS = [
+  {
+    id: 1,
+    name: 'Your Card Name',
+    set: 'Set Name',
+    rarity: 'Holographic',
+    price: '$XX',
+    image: '/path/to/your/card/image.jpg',  // ← Your image here
+    condition: 'Near Mint'
+  },
+  // ... more cards
+]
+
 const AppBody = () => (
   <motion.div 
     initial="hidden"
@@ -34,21 +49,29 @@ const AppBody = () => (
     </motion.h2>
 
     <section className="link-container">
-      <motion.div className="img-link-container" variants={itemVariants}>
+
+      <motion.div className="desc-box" variants={itemVariants}>
         <a 
           href={TCGPLAYER_URL} 
-          className="forSale-link" 
-          target="_blank" 
+          className='desc-link'
+          target="_blank"
           rel="noopener noreferrer"
-          aria-label="Browse our collection"
+          aria-label="Visit our TCGPlayer shop"
         >
-          <img src={forSale} alt="For Sale - Browse Collection" className='forSale-img' />
+          <p className='desc-text'>Explore Our</p>
+          <img src={TCGPLogo} alt="TCGPlayer Shop" className='tcg-img' />
+          <p className='desc-text'>Shop</p>
         </a>
+        <p className='sidenote-text'>
+          Regularly updated inventory with rare finds and competitive pricing
+        </p>
       </motion.div>
     </section>
 
+    <CardGallery />
+
     <motion.h2 className='header-text' variants={itemVariants}>
-      Thanks for Stopping by! 🌟
+      Thanks for Stopping by!
     </motion.h2>
   </motion.div>
 )

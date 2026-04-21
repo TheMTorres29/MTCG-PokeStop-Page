@@ -22,6 +22,7 @@ const Header = () => {
     <div className="header-container">
         <div className={`app-header ${scrolled ? 'scrolled' : ''}`}>
             <div className={`logo-box ${scrolled ? 'scrolled' : ''}`}>
+                <div className={`logo-background ${scrolled ? 'scrolled' : ''}`}></div>
                 <img src={MTCGLogo} alt="MTCG PokeStop Logo" className='mtcg-logo' />
             </div>
         </div>
