@@ -23,19 +23,6 @@ const itemVariants = {
   }
 }
 
-const FEATURED_CARDS = [
-  {
-    id: 1,
-    name: 'Your Card Name',
-    set: 'Set Name',
-    rarity: 'Holographic',
-    price: '$XX',
-    image: '/path/to/your/card/image.jpg',  // ← Your image here
-    condition: 'Near Mint'
-  },
-  // ... more cards
-]
-
 const AppBody = () => (
   <motion.div 
     initial="hidden"

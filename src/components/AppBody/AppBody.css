@@ -254,6 +254,7 @@
     }
 
     .desc-link {
+        width: 100%;
         font-size: 18px;
         padding: 1.5rem 1rem;
     }
