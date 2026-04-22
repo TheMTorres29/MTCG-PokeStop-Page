@@ -1,7 +1,7 @@
 .sprite-container {
     width: 100%;
     overflow: hidden;
-    padding: 1% 0 2% 0;
+    padding: 2% 0 2% 0;
     display: inline-flex;
 }
 
@@ -29,7 +29,7 @@
     position: relative;
     animation: loopingImg 50s infinite linear;
     display: inline-flex;
-    padding-top: 2.4%;
+    padding-top: 1%;
 }
   
 .looping-img-container {
@@ -48,7 +48,7 @@
 @media screen and (max-width: 1200px) {
   .looping-container {
     width: 350%;
-    padding-top: 4%;
+/*    padding-top: 4%;*/
   }
 }
 @media screen and (max-width: 960px) {
@@ -63,13 +63,13 @@
 @media screen and (max-width: 768px) {
   .looping-container {
     width: 550%;
-    padding-top: 8%;
+/*    padding-top: 8%;*/
   }
 }
 @media screen and (max-width: 430px) {
   .looping-container {
     width: 800%;
-    padding-bottom: 2%;
+/*    padding-bottom: 2%;*/
   }
 
   .looping-img-container {

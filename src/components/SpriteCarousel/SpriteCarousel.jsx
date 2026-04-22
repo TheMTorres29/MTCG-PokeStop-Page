@@ -29,7 +29,7 @@ import missingN0 from '../../assets/poke-icons/MissingnoIdle.webp'
      {id: 24, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/dragapult.png'},
      {id: 25, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/ursaluna.png'},
      {id: 26, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/chien-pao.png'},
-     {id: 27, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/roaring-moon.png'},
+     //{id: 27, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/roaring-moon.png'},
      {id: 28, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/okidogi.png'},
      {id: 29, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/munkidori.png'},
      {id: 30, src: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/fezandipiti.png'},
