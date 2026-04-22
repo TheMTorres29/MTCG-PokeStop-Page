@@ -1,26 +1,27 @@
 .footer-container {
-    padding: 0;
+    padding: 0 0 4% 0;
     margin: 0;
     width: 100%;
-    height: 64px;
+    height: 74px;
     background-color: #78ced6;
     flex-direction: row;
     align-items: center;
+    align-content: center;
+    position: relative;
     display: flex;
     z-index: 4;
-  }
-  
-  .insta-box {
+}
+
+.insta-box {
     display: flex;
     width: 200px;
     height: 60%;
     outline: 2px white solid;
     background-color: #78ced6;
     border-radius: 25px;
-    margin-left: auto;
-    margin-right: 2.9%;
+    margin: auto;
     transition: .3s ease;
-  }
+}
   
   .insta-box:hover {
     background-color: #67b3ba;
