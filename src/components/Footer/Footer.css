@@ -1,8 +1,8 @@
 .footer-container {
-    padding: 0 0 4% 0;
+    padding: 0;
     margin: 0;
     width: 100%;
-    height: 74px;
+    height: 12vh;
     background-color: #78ced6;
     flex-direction: row;
     align-items: center;
@@ -10,17 +10,17 @@
     position: relative;
     display: flex;
     z-index: 4;
+    overflow: hidden;
 }
 
 .insta-box {
     display: flex;
     width: 200px;
-    height: 60%;
     outline: 2px white solid;
     background-color: #78ced6;
     border-radius: 25px;
-    margin: auto;
     transition: .3s ease;
+    margin: auto;
 }
   
   .insta-box:hover {
@@ -28,24 +28,25 @@
     opacity: 85%;
     scale: 1.1;
   }
-  
-  .footer-text {
+
+.footer-text {
+    width: 100%;
     vertical-align: middle;
     text-align: center;
     color: white;
-    margin: auto auto;
-  
-  }
-  
-  .insta-link {
+    margin: auto 0;
+}
+
+.insta-link {
     width: 100%;
     display: flex;
     text-decoration: none;
-  }
+    
+}
   
   .insta-icon {
     padding: 2% 5%;
-    height: 100%;
+    height: 50px;
   }
   
   /* Scaling by Dimension*/
