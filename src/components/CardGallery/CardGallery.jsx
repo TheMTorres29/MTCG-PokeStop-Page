@@ -6,12 +6,12 @@ import './CardGallery.css'
 const FEATURED_CARDS = [
   {
     id: 1,
-    name: 'Shining Ho-oh',
-    set: 'SM Promos',
-    rarity: 'Promo',
-    price: '$14.90',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/146979_in_1000x1000.jpg',
-    condition: 'Lightly Played'
+    name: 'Zacian',
+    set: 'Phantasmal Flames',
+    rarity: 'Illustration Rare',
+    price: '$3.09',
+    image: 'https://tcgplayer-cdn.tcgplayer.com/product/662245_in_1000x1000.jpg',
+    condition: 'Near Mint'
   },
   {
     id: 2,
