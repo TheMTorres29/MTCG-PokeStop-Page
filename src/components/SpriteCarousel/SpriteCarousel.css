@@ -17,23 +17,21 @@
 /* Looping Pokemon Sprites */
 @keyframes loopingImg {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-150px * 33));
   }
 }
-  
+
 .looping-container {
-    width: 200%;
-    position: relative;
-    animation: loopingImg 50s infinite linear;
     display: inline-flex;
-    padding-top: 1%;
+    animation: loopingImg 100s infinite linear;
+    will-change: transform;
 }
   
 .looping-img-container {
-    width: 250px;
+    width: 150px;
 }
 
 .sprite-img {
@@ -46,33 +44,57 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .looping-container {
-    width: 350%;
-/*    padding-top: 4%;*/
+  @keyframes loopingImg {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 33));
+    }
   }
 }
+
 @media screen and (max-width: 960px) {
-  .looping-container {
-    width: 400%;
-  }
-
   .looping-img-container {
     width: 150px;
   }
+
+  @keyframes loopingImg {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 33));
+    }
+  }
 }
+
 @media screen and (max-width: 768px) {
-  .looping-container {
-    width: 550%;
-/*    padding-top: 8%;*/
+   .looping-img-container {
+        width: 120px;
+   }
+
+  @keyframes loopingImg {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 33));
+    }
   }
 }
-@media screen and (max-width: 430px) {
-  .looping-container {
-    width: 800%;
-/*    padding-bottom: 2%;*/
-  }
 
+@media screen and (max-width: 430px) {
   .looping-img-container {
     width: 150px;
+  }
+
+  @keyframes loopingImg {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 33));
+    }
   }
 }

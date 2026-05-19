@@ -42,16 +42,10 @@ const SpriteCarousel = () => {
   return (
     <div className='sprite-container'>
         <div className="looping-container">
-            {pokeSprites.map((e, id) => 
-                <div className='looping-img-container'>
-                    <img key={id} src={e.src} className='sprite-img' />
-                </div>
-            )}
-        </div>
-        <div className="looping-container">
-            {pokeSprites.map((e, id) => 
-                <div className='looping-img-container'>
-                    <img key={id} src={e.src} className='sprite-img' />
+            {/* Render sprites twice to create seamless loop */}
+            {[...pokeSprites, ...pokeSprites].map((e, id) => 
+                <div key={id} className='looping-img-container'>
+                    <img src={e.src} className='sprite-img' />
                 </div>
             )}
         </div>

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import './AppBody.css'
 import CardGallery from '../CardGallery/CardGallery'
-import forSale from '../../assets/forSaleLogo/forSale-text.png'
 import TCGPLogo from '../../assets/tcgplayer-logo.png'
 
 const TCGPLAYER_URL = "https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid"
