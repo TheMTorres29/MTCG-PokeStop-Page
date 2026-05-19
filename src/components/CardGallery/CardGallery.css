@@ -234,6 +234,33 @@
   margin-top: 1.5rem !important;
 }
 
+.modal-shop-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #78ced6 0%, #56b5bd 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(120, 206, 214, 0.3);
+  cursor: pointer;
+}
+
+.modal-shop-button:hover {
+  background: linear-gradient(135deg, #56b5bd 0%, #3a9da5 100%);
+  box-shadow: 0 8px 24px rgba(120, 206, 214, 0.4);
+  transform: translateY(-2px);
+}
+
+.modal-shop-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(120, 206, 214, 0.2);
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
   .cards-grid {

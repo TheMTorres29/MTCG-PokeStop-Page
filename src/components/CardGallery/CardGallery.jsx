@@ -1,108 +1,20 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion' // eslint-disable-line no-unused-vars
 import './CardGallery.css'
 
-// Sample data - Replace with your actual card images and info
-const FEATURED_CARDS = [
+const TCGPLAYER_URL = "https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid"
+
+// Fallback cards if API fails
+const FALLBACK_CARDS = [
   {
     id: 1,
-    name: 'Zacian',
-    set: 'Phantasmal Flames',
-    rarity: 'Illustration Rare',
-    price: '$3.09',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/662245_in_1000x1000.jpg',
-    condition: 'Near Mint'
+    name: 'Loading...',
+    set: 'Please check your Google Sheet',
+    rarity: 'Error',
+    price: '$0',
+    image: 'https://via.placeholder.com/250x350?text=Error',
+    condition: 'N/A'
   },
-  {
-    id: 2,
-    name: 'Poke Pad',
-    set: 'Perfect Order',
-    rarity: 'Ultra Rare',
-    price: '$21.77',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/684333_in_1000x1000.jpg',
-    condition: 'Near Mint'
-  },
-  {
-    id: 3,
-    name: 'Unfair Stamp',
-    set: 'Twilight Masquerade',
-    rarity: 'ACE SPEC Rare',
-    price: '$17.25',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/550209_in_1000x1000.jpg',
-    condition: 'Near Mint'
-  },
-  {
-    id: 4,
-    name: 'Volcanion',
-    set: 'XY Promo',
-    rarity: 'Promo',
-    price: '$10.55',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/127139_in_1000x1000.jpg',
-    condition: 'Lightly Played'
-  },
-  {
-    id: 5,
-    name: 'Skuntank V',
-    set: 'Silver Tempest',
-    rarity: 'Ultra Rare',
-    price: '$9.30',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/451829_in_1000x1000.jpg',
-    condition: 'Near Mint'
-  },
-  {
-    id: 6,
-    name: 'Snorlax V',
-    set: 'Sword & Shield Base Set',
-    rarity: 'Ultra Rare',
-    price: '$6.86',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/208457_in_1000x1000.jpg',
-    condition: 'Lightly Played'
-  },
-  {
-    id: 7,
-    name: 'Ho-oh V (Full Art)',
-    set: 'Silver Tempest',
-    rarity: 'Ultra Rare',
-    price: '$6.99',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/451835_in_1000x1000.jpg',
-    condition: 'Lightly Played'
-  },
-  {
-    id: 8,
-    name: 'Night Stretcher',
-    set: 'Mega Evolution',
-    rarity: 'Ultra Rare',
-    price: '$6.49',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/654512_in_1000x1000.jpg',
-    condition: 'Near Mint'
-  },
-  {
-    id: 9,
-    name: 'Greninja ex',
-    set: 'Scarlet % Violet Promo Cards',
-    rarity: 'Promo',
-    price: '$5',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/518878_in_1000x1000.jpg',
-    condition: 'Near Mint'
-  },
-  {
-    id: 10,
-    name: 'Gardevoir ex',
-    set: 'Scarlet & Violet Base Set',
-    rarity: 'Ultra Rare',
-    price: '$4.58',
-    image: 'https://tcgplayer-cdn.tcgplayer.com/product/490086_in_1000x1000.jpg',
-    condition: 'Near Mint'
-  },
-  //{
-  //  id: 11,
-  //  name: '',
-  //  set: '',
-  //  rarity: '',
-  //  price: '$',
-  //  image: '',
-  //  condition: 'Near Mint'
-  //},
 ]
 
 const containerVariants = {
@@ -127,6 +39,60 @@ const cardVariants = {
 
 const CardGallery = () => {
   const [selectedCard, setSelectedCard] = useState(null)
+  const [cards, setCards] = useState(FALLBACK_CARDS)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchCards = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+
+        // Fetch directly from Google Sheets CSV export
+        const SHEET_ID = '1JlakFwxXBtBA8RvIn_y7nHCbz3A39sJqadSTIB2akMU'
+        const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv`
+
+        const response = await fetch(SHEET_URL)
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch cards from Google Sheet')
+        }
+
+        const csv = await response.text()
+        const cards = parseCSV(csv)
+
+        setCards(cards.length > 0 ? cards : FALLBACK_CARDS)
+      } catch (err) {
+        console.error('Error fetching cards:', err)
+        setError(err.message)
+        setCards(FALLBACK_CARDS)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchCards()
+  }, [])
+
+  // Helper function to parse CSV
+  const parseCSV = (csv) => {
+    const lines = csv.trim().split('\n')
+    const headers = lines[0].split(',').map(h => h.trim())
+
+    const cards = lines.slice(1).map((line, index) => {
+      const values = line.split(',').map(v => v.trim())
+      const card = { id: index + 1 }
+
+      headers.forEach((header, headerIndex) => {
+        card[header] = values[headerIndex] || ''
+      })
+
+      return card
+    }).filter(card => card.name) // Filter out empty rows
+
+    return cards
+  }
 
   return (
     <section className='gallery-section'>
@@ -140,7 +106,7 @@ const CardGallery = () => {
         >
           Featured Cards
         </motion.h2>
-        
+
         <motion.p 
           className='gallery-subtitle'
           initial={{ opacity: 0 }}
@@ -151,36 +117,55 @@ const CardGallery = () => {
           Check out some of our most prized additions
         </motion.p>
 
-        <motion.div 
-          className='cards-grid'
-          variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, amount: 'some' }}
-        >
-          {FEATURED_CARDS.map((card) => (
-            <motion.div
-              key={card.id}
-              className='card-wrapper'
-              variants={cardVariants}
-              whileHover={{ y: -8 }}
-              onClick={() => setSelectedCard(card)}
-            >
-              <div className='card-image-container'>
-                <img src={card.image} alt={card.name} className='card-image' />
-                <div className='card-badge'>{card.condition}</div>
-              </div>
-              <div className='card-info'>
-                <h3 className='card-name'>{card.name}</h3>
-                <p className='card-set'>{card.set}</p>
-                <div className='card-footer'>
-                  <span className='card-price'>{card.price}</span>
-                  <span className='card-rarity'>{card.rarity}</span>
+        {error && (
+          <div style={{ 
+            padding: '1rem', 
+            marginBottom: '1rem', 
+            backgroundColor: '#ffe0e0', 
+            borderRadius: '8px',
+            color: '#d32f2f',
+            textAlign: 'center'
+          }}>
+            ⚠️ Error loading cards: {error}
+          </div>
+        )}
+
+        {loading ? (
+          <div style={{ textAlign: 'center', padding: '2rem', color: '#666' }}>
+            Loading cards from Google Sheet...
+          </div>
+        ) : (
+          <motion.div 
+            className='cards-grid'
+            variants={containerVariants}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 'some' }}
+          >
+            {cards.map((card) => (
+              <motion.div
+                key={card.id}
+                className='card-wrapper'
+                variants={cardVariants}
+                whileHover={{ y: -8 }}
+                onClick={() => setSelectedCard(card)}
+              >
+                <div className='card-image-container'>
+                  <img src={card.image} alt={card.name} className='card-image' />
+                  <div className='card-badge'>{card.condition}</div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                <div className='card-info'>
+                  <h3 className='card-name'>{card.name}</h3>
+                  <p className='card-set'>{card.set}</p>
+                  <div className='card-footer'>
+                    <span className='card-price'>{card.price}</span>
+                    <span className='card-rarity'>{card.rarity}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
       </div>
 
       {/* Modal for card details */}
@@ -213,7 +198,14 @@ const CardGallery = () => {
               <p><strong>Rarity:</strong> {selectedCard.rarity}</p>
               <p><strong>Condition:</strong> {selectedCard.condition}</p>
               <p className='modal-price'>{selectedCard.price}</p>
-              <p className='modal-note'>For detailed information or to purchase, visit our TCGPlayer shop.</p>
+              <a 
+                href={TCGPLAYER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className='modal-shop-button'
+              >
+                Visit TCGPlayer Shop
+              </a>
             </div>
           </motion.div>
         </motion.div>
