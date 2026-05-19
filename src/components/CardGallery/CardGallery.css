@@ -341,7 +341,7 @@
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 460px) {
   .gallery-section {
     padding: 2rem 0.75rem;
   }
@@ -355,12 +355,13 @@
   }
 
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
   .card-image-container {
     border-radius: 12px;
+    aspect-ratio: 250 / 350;
   }
 
   .card-info {
@@ -417,5 +418,44 @@
 
   .modal-price {
     font-size: 22px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .gallery-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .card-info {
+    padding: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .card-name {
+    font-size: 13px;
+  }
+
+  .card-set {
+    font-size: 11px;
+  }
+
+  .card-footer {
+    padding-top: 0.6rem;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .card-price {
+    font-size: 13px;
+  }
+
+  .card-badge {
+    padding: 4px 8px;
+    font-size: 10px;
   }
 }
