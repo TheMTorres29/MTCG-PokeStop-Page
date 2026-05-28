@@ -100,10 +100,8 @@
 .desc-link {
     width: fit-content;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0;
     text-decoration: none;
     margin: 0 auto;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
@@ -117,34 +115,12 @@
     filter: drop-shadow(0 12px 28px rgba(120, 206, 214, 0.5));
 }
 
-.desc-text {
-    font-size: 32px;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    background: linear-gradient(135deg, #78ced6 0%, #5dbcc3 100%);
-    padding: 0.35em 1.1em;
-    border-radius: 999px;
-    letter-spacing: 0.5px;
-    line-height: 1.2;
-    display: inline-block;
-}
-
-.desc-text:first-of-type {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: -4px;
-    padding-top: 0.8em;
-/*    padding-bottom: calc(0.35em + 4px);*/
-    width: 60%;
-}
-
-.desc-text:last-of-type {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    margin-top: -4px;
-    padding-top: calc(0.35em + 4px);
-    width: 60%;
+.shop-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .sidenote-text {
@@ -154,24 +130,6 @@
     text-align: center;
     color: #555;
     letter-spacing: 0.3px;
-}
-
-.tcg-img-wrapper {
-    background: linear-gradient(135deg, #78ced6 0%, #5dbcc3 100%);
-    padding: 0.6rem 3rem;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tcg-img {
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    padding: 1rem;
 }
 
 .forSale-img:hover {
@@ -204,12 +162,8 @@
         height: 280px;
     }
 
-    .desc-text {
-        font-size: 28px;
-    }
-
-    .tcg-img {
-        max-width: 220px;
+    .shop-img {
+        max-width: 360px;
     }
 }
 
@@ -262,12 +216,8 @@
         max-width: 300px;
     }
 
-    .desc-text {
-        font-size: 22px;
-    }
-
-    .tcg-img {
-        max-width: 180px;
+    .shop-img {
+        max-width: 320px;
     }
 
     .sidenote-text {
@@ -311,12 +261,8 @@
         width: 90%;
     }
 
-    .desc-text {
-        font-size: 18px;
-    }
-
-    .tcg-img {
-        max-width: 130px;
+    .shop-img {
+        max-width: 240px;
     }
 
     .sidenote-text {

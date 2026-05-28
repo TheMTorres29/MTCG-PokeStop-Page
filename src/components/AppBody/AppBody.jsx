@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import './AppBody.css'
 import CardGallery from '../CardGallery/CardGallery'
-import TCGPLogo from '../../assets/tcgplayer-logo.png'
 import cardBanner from '../../assets/cardbacklot.jpg'
+import shopImage from '../../assets/ExploreOurShopWhite.png'
 
 const TCGPLAYER_URL = "https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid"
 
@@ -49,11 +49,7 @@ const AppBody = () => (
           rel="noopener noreferrer"
           aria-label="Visit our TCGPlayer shop"
         >
-          <p className='desc-text'>Explore Our</p>
-          <div className='tcg-img-wrapper'>
-            <img src={TCGPLogo} alt="TCGPlayer Shop" className='tcg-img' />
-          </div>
-          <p className='desc-text'>Shop</p>
+          <img src={shopImage} alt="Explore Our TCGPlayer Shop" className='shop-img' />
         </a>
         <p className='sidenote-text'>
           Regularly updated inventory with rare finds and competitive pricing
