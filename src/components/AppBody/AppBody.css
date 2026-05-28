@@ -135,6 +135,7 @@
     border-bottom-right-radius: 0;
     margin-bottom: -4px;
     padding-bottom: calc(0.35em + 4px);
+    width: 60%;
 }
 
 .desc-text:last-of-type {
@@ -142,6 +143,7 @@
     border-top-right-radius: 0;
     margin-top: -4px;
     padding-top: calc(0.35em + 4px);
+    width: 60%;
 }
 
 .sidenote-text {
@@ -164,10 +166,11 @@
 
 .tcg-img {
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
     height: auto;
     display: block;
     object-fit: contain;
+    padding: 1rem;
 }
 
 .forSale-img:hover {

@@ -17,6 +17,34 @@ const FALLBACK_CARDS = [
   },
 ]
 
+const SORT_OPTIONS = [
+  { value: 'index-asc',  label: 'Last Added ↑' },
+  { value: 'index-desc', label: 'Last Added ↓' },
+  { value: 'name-asc',   label: 'Name A → Z' },
+  { value: 'name-desc',  label: 'Name Z → A' },
+  { value: 'price-asc',  label: 'Price Low → High' },
+  { value: 'price-desc', label: 'Price High → Low' },
+]
+
+const sortCards = (cards, sortBy) => {
+  const sorted = [...cards]
+  switch (sortBy) {
+    case 'name-asc':
+      return sorted.sort((a, b) => a.name.localeCompare(b.name))
+    case 'name-desc':
+      return sorted.sort((a, b) => b.name.localeCompare(a.name))
+    case 'price-asc':
+      return sorted.sort((a, b) => parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')))
+    case 'price-desc':
+      return sorted.sort((a, b) => parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')))
+    case 'index-desc':
+      return sorted.sort((a, b) => b.id - a.id)
+    case 'index-asc':
+    default:
+      return sorted.sort((a, b) => a.id - b.id)
+  }
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -42,6 +70,7 @@ const CardGallery = () => {
   const [cards, setCards] = useState(FALLBACK_CARDS)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [sortBy, setSortBy] = useState('index-asc')
 
   useEffect(() => {
     const fetchCards = async () => {
@@ -117,6 +146,21 @@ const CardGallery = () => {
           Check out some of our most prized additions
         </motion.p>
 
+        <div className='sort-bar'>
+          <span className='sort-label'>Sort by:</span>
+          <div className='sort-options'>
+            {SORT_OPTIONS.map(option => (
+              <button
+                key={option.value}
+                className={`sort-btn ${sortBy === option.value ? 'sort-btn--active' : ''}`}
+                onClick={() => setSortBy(option.value)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {error && (
           <div style={{ 
             padding: '1rem', 
@@ -142,7 +186,7 @@ const CardGallery = () => {
             whileInView='visible'
             viewport={{ once: true, amount: 'some' }}
           >
-            {cards.map((card) => (
+            {sortCards(cards, sortBy).map((card) => (
               <motion.div
                 key={card.id}
                 className='card-wrapper'
