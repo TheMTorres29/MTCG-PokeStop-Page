@@ -134,7 +134,8 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     margin-bottom: -4px;
-    padding-bottom: calc(0.35em + 4px);
+    padding-top: 0.8em;
+/*    padding-bottom: calc(0.35em + 4px);*/
     width: 60%;
 }
 
