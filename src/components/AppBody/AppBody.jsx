@@ -45,7 +45,9 @@ const AppBody = () => (
           aria-label="Visit our TCGPlayer shop"
         >
           <p className='desc-text'>Explore Our</p>
-          <img src={TCGPLogo} alt="TCGPlayer Shop" className='tcg-img' />
+          <div className='tcg-img-wrapper'>
+            <img src={TCGPLogo} alt="TCGPlayer Shop" className='tcg-img' />
+          </div>
           <p className='desc-text'>Shop</p>
         </a>
         <p className='sidenote-text'>

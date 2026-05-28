@@ -12,12 +12,12 @@
 }
 
 .gallery-title {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 700;
   text-align: center;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 1rem;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
 }
 
 .gallery-subtitle {
