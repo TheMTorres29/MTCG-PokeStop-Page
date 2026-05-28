@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import './AppBody.css'
 import CardGallery from '../CardGallery/CardGallery'
 import TCGPLogo from '../../assets/tcgplayer-logo.png'
+import cardBanner from '../../assets/cardbacklot.jpg'
 
 const TCGPLAYER_URL = "https://www.tcgplayer.com/search/all/product?seller=a700ba02&view=grid"
 
@@ -30,6 +31,10 @@ const AppBody = () => (
     viewport={{ amount: "some", margin: "-100px" }}
     className='appbody-container'
   >
+    <div className='banner-wrapper'>
+      <img src={cardBanner} alt="Card collection banner" className='banner-img' />
+    </div>
+
     <motion.h2 className='header-text' variants={itemVariants}>
       Pokémon Cards
     </motion.h2>

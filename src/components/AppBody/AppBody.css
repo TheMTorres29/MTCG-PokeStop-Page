@@ -5,7 +5,40 @@
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
-    padding: 4rem 2rem;
+    padding: 0 2rem 4rem;
+}
+
+/* Banner */
+.banner-wrapper {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    margin-right: -2rem;
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .header-text {
@@ -163,6 +196,10 @@
         padding: 1.2rem 2.5rem;
     }
 
+    .banner-wrapper {
+        height: 280px;
+    }
+
     .desc-text {
         font-size: 28px;
     }
@@ -191,7 +228,14 @@
 
 @media screen and (max-width: 768px) {
     .appbody-container {
-        padding: 2rem 1rem;
+        padding: 0 1rem 2rem;
+    }
+
+    .banner-wrapper {
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+        margin-right: -1rem;
+        height: 220px;
     }
 
     .header-text {
@@ -230,7 +274,14 @@
 
 @media screen and (max-width: 430px) {
     .appbody-container {
-        padding: 1.5rem 1rem;
+        padding: 0 1rem 1.5rem;
+    }
+
+    .banner-wrapper {
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+        margin-right: -1rem;
+        height: 180px;
     }
 
     .header-text {
