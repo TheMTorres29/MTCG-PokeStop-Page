@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prebuild": "npm run prepare:icons",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -20,7 +19,7 @@
     "caniuse-lite": "^1.0.30001810",
     "framer-motion": "^12.15.0",
     "nanoid": "^6.0.1",
-    "npx": "^10.2.2",
+    "npx": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-use-measure": "^2.1.7"
