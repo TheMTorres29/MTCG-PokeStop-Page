@@ -16,8 +16,11 @@
     "prepare:icons": "node scripts/generate-apple-icons.mjs"
   },
   "dependencies": {
+    "browserslist": "^4.28.9",
+    "caniuse-lite": "^1.0.30001810",
     "framer-motion": "^12.15.0",
     "nanoid": "^6.0.1",
+    "npx": "^10.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-use-measure": "^2.1.7"
